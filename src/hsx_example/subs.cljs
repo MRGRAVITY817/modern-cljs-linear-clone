@@ -7,14 +7,14 @@
    (:todos db)))
 
 (rfx/reg-sub
- :filter
+ :todo-filter
  (fn [db _]
-   (:filter db)))
+   (:todo-filter db)))
 
 (rfx/reg-sub
  :visible-todos
- (fn [{:keys [todos filter]} _]
-   (case filter
+ (fn [{:keys [todos todo-filter] :as db} _]
+   (case todo-filter
      :active (filter #(not (:completed %)) todos)
      :completed (filter :completed todos)
      todos)))

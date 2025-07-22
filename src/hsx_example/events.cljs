@@ -36,4 +36,4 @@
 (rfx/reg-event-db
  :set-filter
  (fn [db [_ filter]]
-   (assoc db :filter filter)))
+   (assoc db :todo-filter filter)))
