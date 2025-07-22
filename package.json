@@ -1,0 +1,23 @@
+{
+	"name": "hsx-example",
+	"version": "0.1.0",
+	"description": "Linear clone using ClojureScript with HSX and RFX",
+	"main": "index.js",
+	"scripts": {
+		"dev": "shadow-cljs watch app",
+		"build": "shadow-cljs release app",
+		"test": "shadow-cljs compile test",
+		"repl": "shadow-cljs cljs-repl app",
+		"clean": "shadow-cljs clean",
+		"css:build": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css --watch",
+		"css:prod": "tailwindcss -i ./src/css/input.css -o ./public/css/output.css --minify"
+	},
+	"devDependencies": {
+		"shadow-cljs": "^3.1.7",
+		"tailwindcss": "^4.1.0"
+	},
+	"dependencies": {
+		"react": "19.1.0",
+		"react-dom": "19.1.0"
+	}
+}
